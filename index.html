@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye of the Inti | Peruvian Satellite Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Starfield Background -->
+    <div class="starfield" id="starfield"></div>
+    <div class="golden-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 60 60" class="sun-icon">
+                        <circle cx="30" cy="30" r="12" fill="url(#goldGradient)"/>
+                        <g class="sun-rays">
+                            <line x1="30" y1="5" x2="30" y2="15"/>
+                            <line x1="30" y1="45" x2="30" y2="55"/>
+                            <line x1="5" y1="30" x2="15" y2="30"/>
+                            <line x1="45" y1="30" x2="55" y2="30"/>
+                            <line x1="12" y1="12" x2="19" y2="19"/>
+                            <line x1="41" y1="41" x2="48" y2="48"/>
+                            <line x1="12" y1="48" x2="19" y2="41"/>
+                            <line x1="41" y1="19" x2="48" y2="12"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFD700"/>
+                                <stop offset="50%" style="stop-color:#FFA500"/>
+                                <stop offset="100%" style="stop-color:#FF8C00"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Eye of the Inti</span>
+                    <span class="logo-sub">by Intinauta</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#satellites">Satellites</a></li>
+                <li><a href="#database">Database</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-secondary">Sign In</button>
+                <button class="btn-primary">Access Data</button>
+            </div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                LIVE SATELLITE FEED
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Observing Peru</span>
+                <span class="title-line gold">From the Cosmos</span>
+            </h1>
+            <p class="hero-description">
+                Advanced satellite imagery and geospatial intelligence powered by Intinauta's 
+                cutting-edge orbital observation network. Explore Peru's terrain, climate, 
+                and resources through the eye of our satellites.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value" data-count="12">0</span>
+                    <span class="stat-label">Active Satellites</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" data-count="2847">0</span>
+                    <span class="stat-label">Daily Images</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" data-count="98">0</span>
+                    <span class="stat-label">% Coverage</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button class="btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                    Explore Database
+                </button>
+                <button class="btn-outline btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    Watch Demo
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-system">
+                <div class="planet peru">
+                    <div class="planet-surface"></div>
+                    <div class="planet-atmosphere"></div>
+                </div>
+                <div class="orbit orbit-1">
+                    <div class="satellite sat-1">
+                        <div class="satellite-body"></div>
+                        <div class="satellite-panel left"></div>
+                        <div class="satellite-panel right"></div>
+                        <div class="satellite-beam"></div>
+                    </div>
+                </div>
+                <div class="orbit orbit-2">
+                    <div class="satellite sat-2">
+                        <div class="satellite-body"></div>
+                        <div class="satellite-panel left"></div>
+                        <div class="satellite-panel right"></div>
+                    </div>
+                </div>
+                <div class="orbit orbit-3">
+                    <div class="satellite sat-3">
+                        <div class="satellite-body"></div>
+                        <div class="satellite-panel left"></div>
+                        <div class="satellite-panel right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- Live Feed Section -->
+    <section class="live-feed">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Real-Time Data</span>
+                <h2>Live Satellite Coverage</h2>
+            </div>
+            <div class="map-container">
+                <div class="map-frame">
+                    <div class="map-overlay">
+                        <div class="scan-line"></div>
+                    </div>
+                    <div class="map-grid">
+                        <svg viewBox="0 0 800 400" class="peru-outline">
+                            <!-- Simplified Peru outline -->
+                            <path class="peru-path" d="M200,50 L280,40 L350,80 L380,150 L400,250 L380,320 L300,380 L220,350 L180,280 L160,200 L180,120 Z" fill="none" stroke="var(--gold)" stroke-width="2"/>
+                            <!-- Data points -->
+                            <circle class="data-point" cx="250" cy="100" r="4"/>
+                            <circle class="data-point" cx="320" cy="180" r="4"/>
+                            <circle class="data-point" cx="280" cy="280" r="4"/>
+                            <circle class="data-point" cx="220" cy="220" r="4"/>
+                            <circle class="data-point" cx="350" cy="250" r="4"/>
+                        </svg>
+                    </div>
+                    <div class="map-info">
+                        <div class="info-card">
+                            <h4>Current Pass</h4>
+                            <p class="satellite-name">INTI-SAT 7</p>
+                            <p class="pass-time">Next pass: 14:32 UTC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed-stats">
+                    <div class="feed-stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">847</span>
+                            <span class="stat-text">TB of Data</span>
+                        </div>
+                    </div>
+                    <div class="feed-stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M3 9h18M9 21V9"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">15cm</span>
+                            <span class="stat-text">Resolution</span>
+                        </div>
+                    </div>
+                    <div class="feed-stat">
+                        <div class="stat-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number">4hrs</span>
+                            <span class="stat-text">Revisit Time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Satellites Section -->
+    <section id="satellites" class="satellites">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">Our Fleet</span>
+                <h2>Satellite Constellation</h2>
+                <p>A network of advanced Earth observation satellites providing comprehensive coverage of Peruvian territory</p>
+            </div>
+            <div class="satellite-grid">
+                <div class="satellite-card featured">
+                    <div class="card-glow"></div>
+                    <div class="card-header">
+                        <span class="sat-status online">● Online</span>
+                        <span class="sat-type">Primary</span>
+                    </div>
+                    <div class="sat-visual">
+                        <div class="sat-3d">
+                            <div class="sat-body-3d"></div>
+                            <div class="sat-wing left"></div>
+                            <div class="sat-wing right"></div>
+                        </div>
+                    </div>
+                    <h3>INTI-SAT Prime</h3>
+                    <p class="sat-desc">Flagship multispectral imaging satellite with 10cm resolution capability</p>
+                    <div class="sat-specs">
+                        <div class="spec">
+                            <span class="spec-label">Altitude</span>
+                            <span class="spec-value">520 km</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Orbit</span>
+                            <span class="spec-value">Sun-sync</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Launch</span>
+                            <span class="spec-value">2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="satellite-card">
+                    <div class="card-header">
+                        <span class="sat-status online">● Online</span>
+                        <span class="sat-type">Imaging</span>
+                    </div>
+                    <div class="sat-visual">
+                        <div class="sat-3d small">
+                            <div class="sat-body-3d"></div>
+                            <div class="sat-wing left"></div>
+                            <div class="sat-wing right"></div>
+                        </div>
+                    </div>
+                    <h3>INTI-SAT 2</h3>
+                    <p class="sat-desc">High-resolution optical imaging for detailed terrain mapping</p>
+                    <div class="sat-specs">
+                        <div class="spec">
+                            <span class="spec-label">Altitude</span>
+                            <span class="spec-value">480 km</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Resolution</span>
+                            <span class="spec-value">25 cm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="satellite-card">
+                    <div class="card-header">
+                        <span class="sat-status online">● Online</span>
+                        <span class="sat-type">Radar</span>
+                    </div>
+                    <div class="sat-visual">
+                        <div class="sat-3d small">
+                            <div class="sat-body-3d"></div>
+                            <div class="sat-wing left"></div>
+                            <div class="sat-wing right"></div>
+                        </div>
+                    </div>
+                    <h3>INTI-SAR</h3>
+                    <p class="sat-desc">Synthetic aperture radar for all-weather observation</p>
+                    <div class="sat-specs">
+                        <div class="spec">
+                            <span class="spec-label">Altitude</span>
+                            <span class="spec-value">600 km</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Band</span>
+                            <span class="spec-value">X-Band</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="satellite-card">
+                    <div class="card-header">
+                        <span class="sat-status standby">● Standby</span>
+                        <span class="sat-type">Thermal</span>
+                    </div>
+                    <div class="sat-visual">
+                        <div class="sat-3d small">
+                            <div class="sat-body-3d"></div>
+                            <div class="sat-wing left"></div>
+                            <div class="sat-wing right"></div>
+                        </div>
+                    </div>
+                    <h3>INTI-THERM</h3>
+                    <p class="sat-desc">Thermal infrared imaging for heat mapping and monitoring</p>
+                    <div class="sat-specs">
+                        <div class="spec">
+                            <span class="spec-label">Altitude</span>
+                            <span class="spec-value">550 km</span>
+                        </div>
+                        <div class="spec">
+                            <span class="spec-label">Bands</span>
+                            <span class="spec-value">TIR/MIR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Database Section -->
+    <section id="database" class="database">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Data Repository</span>
+                <h2>Satellite Image Database</h2>
+            </div>
+            <div class="database-interface">
+                <div class="search-panel">
+                    <div class="search-header">
+                        <h3>Query Database</h3>
+                        <span class="record-count">2.4M+ images available</span>
+                    </div>
+                    <div class="search-form">
+                        <div class="form-group">
+                            <label>Region</label>
+                            <select>
+                                <option>All Peru</option>
+                                <option>Lima Metropolitan</option>
+                                <option>Cusco Region</option>
+                                <option>Amazon Basin</option>
+                                <option>Coastal Desert</option>
+                                <option>Andean Highlands</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Satellite</label>
+                            <select>
+                                <option>All Satellites</option>
+                                <option>INTI-SAT Prime</option>
+                                <option>INTI-SAT 2</option>
+                                <option>INTI-SAR</option>
+                                <option>INTI-THERM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Date Range</label>
+                            <div class="date-inputs">
+                                <input type="date" value="2024-01-01">
+                                <span>to</span>
+                                <input type="date" value="2024-12-13">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Image Type</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox"><input type="checkbox" checked> RGB</label>
+                                <label class="checkbox"><input type="checkbox" checked> Multispectral</label>
+                                <label class="checkbox"><input type="checkbox"> SAR</label>
+                                <label class="checkbox"><input type="checkbox"> Thermal</label>
+                            </div>
+                        </div>
+                        <button class="btn-primary full-width">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <path d="M21 21l-4.35-4.35"/>
+                            </svg>
+                            Search Images
+                        </button>
+                    </div>
+                </div>
+                <div class="results-panel">
+                    <div class="results-header">
+                        <h3>Recent Captures</h3>
+                        <div class="view-toggle">
+                            <button class="active">Grid</button>
+                            <button>List</button>
+                        </div>
+                    </div>
+                    <div class="image-grid">
+                        <div class="image-card">
+                            <div class="image-preview lima"></div>
+                            <div class="image-info">
+                                <span class="image-title">Lima Coast</span>
+                                <span class="image-date">Dec 12, 2024</span>
+                                <span class="image-sat">INTI-SAT Prime</span>
+                            </div>
+                        </div>
+                        <div class="image-card">
+                            <div class="image-preview cusco"></div>
+                            <div class="image-info">
+                                <span class="image-title">Cusco Valley</span>
+                                <span class="image-date">Dec 11, 2024</span>
+                                <span class="image-sat">INTI-SAT 2</span>
+                            </div>
+                        </div>
+                        <div class="image-card">
+                            <div class="image-preview amazon"></div>
+                            <div class="image-info">
+                                <span class="image-title">Amazon Basin</span>
+                                <span class="image-date">Dec 10, 2024</span>
+                                <span class="image-sat">INTI-SAR</span>
+                            </div>
+                        </div>
+                        <div class="image-card">
+                            <div class="image-preview andes"></div>
+                            <div class="image-info">
+                                <span class="image-title">Andes Range</span>
+                                <span class="image-date">Dec 9, 2024</span>
+                                <span class="image-sat">INTI-SAT Prime</span>
+                            </div>
+                        </div>
+                        <div class="image-card">
+                            <div class="image-preview nazca"></div>
+                            <div class="image-info">
+                                <span class="image-title">Nazca Lines</span>
+                                <span class="image-date">Dec 8, 2024</span>
+                                <span class="image-sat">INTI-SAT 2</span>
+                            </div>
+                        </div>
+                        <div class="image-card">
+                            <div class="image-preview titicaca"></div>
+                            <div class="image-info">
+                                <span class="image-title">Lake Titicaca</span>
+                                <span class="image-date">Dec 7, 2024</span>
+                                <span class="image-sat">INTI-SAT Prime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section id="analysis" class="analysis">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="section-tag">AI-Powered</span>
+                <h2>Geospatial Analysis Tools</h2>
+                <p>Advanced machine learning algorithms for automated analysis and insights extraction</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>3D Terrain Mapping</h3>
+                    <p>Generate precise digital elevation models from stereo satellite imagery</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Change Detection</h3>
+                    <p>Automated detection of terrain changes, deforestation, and urban expansion</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3>Climate Monitoring</h3>
+                    <p>Track weather patterns, glacier retreat, and environmental changes</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                            <line x1="4" y1="22" x2="4" y2="15"/>
+                        </svg>
+                    </div>
+                    <h3>Crop Analysis</h3>
+                    <p>Agricultural monitoring with NDVI and vegetation health indices</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                            <polyline points="2 17 12 22 22 17"/>
+                            <polyline points="2 12 12 17 22 12"/>
+                        </svg>
+                    </div>
+                    <h3>Urban Planning</h3>
+                    <p>Infrastructure analysis and urban development tracking</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Reports</h3>
+                    <p>Generate comprehensive analysis reports with visualizations</p>
+                    <a href="#" class="tool-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="research">
+        <div class="container">
+            <div class="research-grid">
+                <div class="research-content">
+                    <span class="section-tag">Scientific Research</span>
+                    <h2>Advancing Space Technology for Peru</h2>
+                    <p>Intinauta's research division develops cutting-edge satellite technology and analysis methods to address Peru's unique geographical and environmental challenges.</p>
+                    <div class="research-stats">
+                        <div class="r-stat">
+                            <span class="r-value">47</span>
+                            <span class="r-label">Published Papers</span>
+                        </div>
+                        <div class="r-stat">
+                            <span class="r-value">12</span>
+                            <span class="r-label">Research Partners</span>
+                        </div>
+                        <div class="r-stat">
+                            <span class="r-value">8</span>
+                            <span class="r-label">Active Projects</span>
+                        </div>
+                    </div>
+                    <button class="btn-primary">View Research Portal</button>
+                </div>
+                <div class="research-visual">
+                    <div class="research-card">
+                        <div class="rc-icon">📡</div>
+                        <h4>Glacial Monitoring</h4>
+                        <p>Tracking Andean glacier retreat using multi-temporal SAR analysis</p>
+                        <span class="rc-status">Ongoing</span>
+                    </div>
+                    <div class="research-card">
+                        <div class="rc-icon">🌿</div>
+                        <h4>Amazon Deforestation</h4>
+                        <p>AI-powered detection of illegal logging activities</p>
+                        <span class="rc-status">Ongoing</span>
+                    </div>
+                    <div class="research-card">
+                        <div class="rc-icon">🏛️</div>
+                        <h4>Archaeological Survey</h4>
+                        <p>Discovering hidden archaeological sites using LiDAR</p>
+                        <span class="rc-status">Phase 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Intinauta Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="intinauta-logo">
+                        <div class="inti-symbol">
+                            <svg viewBox="0 0 200 200">
+                                <defs>
+                                    <linearGradient id="intiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#FFD700"/>
+                                        <stop offset="50%" style="stop-color:#FFA500"/>
+                                        <stop offset="100%" style="stop-color:#FF6B00"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="100" cy="100" r="40" fill="url(#intiGradient)"/>
+                                <g class="inti-rays" stroke="url(#intiGradient)" stroke-width="4" fill="none">
+                                    <line x1="100" y1="20" x2="100" y2="50"/>
+                                    <line x1="100" y1="150" x2="100" y2="180"/>
+                                    <line x1="20" y1="100" x2="50" y2="100"/>
+                                    <line x1="150" y1="100" x2="180" y2="100"/>
+                                    <line x1="40" y1="40" x2="65" y2="65"/>
+                                    <line x1="135" y1="135" x2="160" y2="160"/>
+                                    <line x1="40" y1="160" x2="65" y2="135"/>
+                                    <line x1="135" y1="65" x2="160" y2="40"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <span class="intinauta-name">INTINAUTA</span>
+                        <span class="intinauta-tagline">Peru's Gateway to Space</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Intinauta</span>
+                    <h2>Pioneering Peru's Space Future</h2>
+                    <p>Founded in 2018, Intinauta is Peru's premier space research and technology company. Named after Inti, the Incan sun god, we harness the power of space observation to illuminate the path forward for our nation.</p>
+                    <p>Our mission is to provide Peruvian institutions, researchers, and businesses with world-class satellite imagery and geospatial intelligence, enabling data-driven decisions for sustainable development.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="af-icon">🛰️</div>
+                            <div class="af-text">
+                                <h4>Orbital Infrastructure</h4>
+                                <p>Operating 12 satellites in low Earth orbit</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="af-icon">🔬</div>
+                            <div class="af-text">
+                                <h4>Research Excellence</h4>
+                                <p>Partnered with top universities worldwide</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="af-icon">🌎</div>
+                            <div class="af-text">
+                                <h4>National Coverage</h4>
+                                <p>Complete Peruvian territory imaging capability</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Explore Peru from Space?</h2>
+                <p>Get access to our comprehensive satellite imagery database and analysis tools</p>
+                <div class="cta-actions">
+                    <button class="btn-primary btn-large">Get Started Free</button>
+                    <button class="btn-outline btn-large">Contact Sales</button>
+                </div>
+            </div>
+            <div class="cta-decoration">
+                <div class="orbit-ring"></div>
+                <div class="orbit-ring"></div>
+                <div class="orbit-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 60 60" class="sun-icon small">
+                            <circle cx="30" cy="30" r="12" fill="url(#goldGradient)"/>
+                            <g class="sun-rays">
+                                <line x1="30" y1="5" x2="30" y2="15"/>
+                                <line x1="30" y1="45" x2="30" y2="55"/>
+                                <line x1="5" y1="30" x2="15" y2="30"/>
+                                <line x1="45" y1="30" x2="55" y2="30"/>
+                            </g>
+                        </svg>
+                        <span>Eye of the Inti</span>
+                    </div>
+                    <p>Illuminating Peru's future through advanced satellite observation and geospatial intelligence.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="GitHub">⌘</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#">Image Database</a></li>
+                        <li><a href="#">Analysis Tools</a></li>
+                        <li><a href="#">API Access</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Intinauta</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Intinauta Space Technologies. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
